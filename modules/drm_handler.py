@@ -297,7 +297,7 @@ async def drm_handler(bot: Client, m: Message):
                 result = helper.get_mps_and_keys2(url)
                 if result is None:
                     await m.reply_text(f"❌ Token failed. Trying next one...")
-                    time.sleep(100)
+                    time.sleep(1000)
                     result = helper.get_mps_and_keys2(url)                
                 mpd, keys = result
                 url = mpd
@@ -313,7 +313,7 @@ async def drm_handler(bot: Client, m: Message):
                 result = helper.get_mps_and_keys3(url)
                 if result is None:
                     await m.reply_text(f"❌ Token failed. Trying next one...")
-                    time.sleep(100)
+                    time.sleep(1000)
                     result = helper.get_mps_and_keys3(url)
                 mpd = result    
                 mpd = helper.get_mps_and_keys3(url) 
@@ -327,7 +327,7 @@ async def drm_handler(bot: Client, m: Message):
                 result = helper.get_mps_and_keys2(url)
                 if result is None:
                     await m.reply_text(f"❌ Token failed. Trying next one...")
-                    time.sleep(100)
+                    time.sleep(1000)
                     result = helper.get_mps_and_keys2(url)                
                 mpd, keys = result
                 url = mpd
